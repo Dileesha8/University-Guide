@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Continents List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a9dfdc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #f8f4f4;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #579dad;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            background: #5ccfe3;
+            transition: 0.3s;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        li:hover {
+            background: #88ead0;
+        }
+        .countries, .universities {
+            margin-left: 20px;
+            display: none;
+            list-style-type: none;
+        }
+        .countries li, .universities li {
+            background: #f2f5f6;
+            padding: 8px 12px;
+            margin: 4px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Continents</h1>
+        <ul>
+            <li onclick="toggleCountries(event, 'Africa')">Africa
+                <ul class="countries" id="Africa">
+                    <li onclick="toggleUniversities(event, 'Nigeria')">Nigeria
+                        <ul class="universities" id="Nigeria">
+                            <li>University of Lagos</li>
+                            <li>Obafemi Awolowo University</li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleUniversities(event, 'Egypt')">Egypt
+                        <ul class="universities" id="Egypt">
+                            <li>Cairo University</li>
+                            <li>Alexandria University</li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleUniversities(event, 'South Africa')">South Africa
+                        <ul class="universities" id="South Africa">
+                            <li>University of Cape Town</li>
+                            <li>University of Pretoria</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li onclick="toggleCountries(event, 'Asia')">Asia
+                <ul class="countries" id="Asia">
+                    <li onclick="toggleUniversities(event, 'India')">India
+                        <ul class="universities" id="India">
+                            <li>Indian Institute of Technology(IIT),New Delhi</li>
+                            <li>Indian Institute of Technology(IIT),Chennai</li>
+                            <li>Indian Institute of Science(IISc),Banglore</li>
+                            <li>Vellore Institute of Technology(VIT),Vellore</li>
+                            <li>Jawaharlal Nehru National Institute of Technology(JNU), Delhi</li>
+                            <li>Indian Institute of Technology(IIT),Roorkee</li>
+                            <li>Indian Institute of Management (IIM) Ahmedabad </li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleUniversities(event, 'China')">China
+                        <ul class="universities" id="China">
+                            <li>Peking University</li>
+                            <li>Tsinghua University</li>
+                             <li>Fudan University (Shanghai)</li>
+                            <li>Shanghai Jiao Tong University (Shanghai)</li>
+                            <li>Zhejiang University (Hangzhou)</li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleUniversities(event, 'Japan')">Japan
+                        <ul class="universities" id="Japan">
+                            <li>University of Tokyo (Tokyo)</li>
+                            <li>Kyoto University (Kyoto)</li>
+                            <li>Osaka University (Osaka)</li>
+                            <li>Keio University (Tokyo)</li>
+                            <li>Waseda University (Tokyo)</li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleUniversities(event, 'Singapore')">Singapore
+                        <ul class="universities" id="Singapore">
+                            <li>National University of Singapore (NUS) (Singapore)</li>
+                            <li>Nanyang Technological University (NTU) (Singapore)</li>
+                            <li>Singapore Management University (SMU) (Singapore)</li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleUniversities(event, 'Malaysia')">Malaysia
+                        <ul class="universities" id="Malaysia">
+                            <li>University of Malaya (UM) (Kuala Lumpur)</li>
+                            <li>Monash University Malaysia (Selangor)</li>
+                            <li>Universiti Teknologi Malaysia (UTM) (Skudai)</li>
+                            <li>Universiti Kebangsaan Malaysia (UKM) (Bangi)</li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleUniversities(event, 'UAE')">UAE
+                        <ul class="universities" id="UAE">
+                            <li>United Arab Emirates University (Al Ain)</li>
+                            <li>American University of Sharjah (Sharjah)</li>
+                            <li>Zayed University (Abu Dhabi)</li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleUniversities(event, 'Indonesia')">Indonesia
+                        <ul class="universities" id="Indonesia">
+                            <li>University of Indonesia (Depok)</li>
+                            <li>Gadjah Mada University (Yogyakarta)</li>
+                            <li>Bandung Institute of Technology (ITB) (Bandung)</li>
+                            <li>Padjadjaran University (Bandung)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Adding new continents and countries -->
+            <li onclick="toggleCountries(event, 'Europe')">Europe
+                <ul class="countries" id="Europe">
+                    <li onclick="toggleUniversities(event, 'Germany')">Germany
+                        <ul class="universities" id="Germany">
+                            <li>Technische Universität München (Munich)</li>
+                            <li>University of Heidelberg</li>
+                            <li>University of Freiburg</li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleUniversities(event, 'UK')">United Kingdom
+                        <ul class="universities" id="UK">
+                            <li>University of Oxford</li>
+                            <li>University of Cambridge</li>
+                            <li>Imperial College London</li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleUniversities(event, 'France')">France
+                        <ul class="universities" id="France">
+                            <li>École Normale Supérieure (Paris)</li>
+                            <li>Université PSL (Paris)</li>
+                            <li>Université Paris-Saclay</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li onclick="toggleCountries(event, 'North America')">North America
+                <ul class="countries" id="North America">
+                    <li onclick="toggleUniversities(event, 'USA')">United States
+                        <ul class="universities" id="USA">
+                            <li><a href="harvard.html" target="_blank">Harvard University</a></li>
+
+                            <li><a href="mit.html">Massachusetts Institute of Technology (MIT)</a></li>
+                            <li><a href="standford.html">Stanford University</a></li>
+                            <li><a href="california.html">University of California, Berkeley</a></li>
+
+                        </ul>
+                    </li>
+                    <li onclick="toggleUniversities(event, 'Canada')">Canada
+                        <ul class="universities" id="Canada">
+                            <li><a href="toronto.html">University of Toronto</a></li>
+        <li><a href="mcgill.html">McGill University</a></li>
+        <li><a href="british_columbia.html">University of British Columbia</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li onclick="toggleCountries(event, 'South America')">South America
+                <ul class="countries" id="South America">
+                    <li onclick="toggleUniversities(event, 'Brazil')">Brazil
+                        <ul class="universities" id="Brazil">
+                            <li><a hreUniversity of São Paulo</li>
+                            <li>Campinas University</li>
+                            <li>Federal University of Rio de Janeiro</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li onclick="toggleCountries(event, 'Australia')">Australia/Oceania
+                <ul class="countries" id="Australia">
+                    <li onclick="toggleUniversities(event, 'Australia')">Australia
+                        <ul class="universities" id="Australia">
+                            <li>Australian National University (ANU)</li>
+                            <li>University of Melbourne</li>
+                            <li>University of Sydney</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li onclick="toggleCountries(event, 'Antarctica')">Antarctica
+                <ul class="countries" id="Antarctica">
+                    <li>No universities currently</li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+    <script>
+        function toggleCountries(event, continent) {
+            event.stopPropagation();
+            const countriesList = document.getElementById(continent);
+            countriesList.style.display = (countriesList.style.display === 'none' || countriesList.style.display === '') ? 'block' : 'none';
+        }
+        
+        function toggleUniversities(event, country) {
+            event.stopPropagation();
+            const allUniversities = document.querySelectorAll('.universities');
+            allUniversities.forEach(function(uni) {
+                if (uni.id !== country) {
+                    uni.style.display = 'none';
+                }
+            });
+            
+            const universitiesList = document.getElementById(country);
+            universitiesList.style.display = (universitiesList.style.display === 'none' || universitiesList.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
